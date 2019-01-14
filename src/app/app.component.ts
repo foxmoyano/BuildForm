@@ -1,7 +1,7 @@
 import { Component }  from '@angular/core';
 import { SelectItem } from 'primeng/api';
 
-interface City {
+interface Serie {
   name: string;
   code: string;
 }
@@ -12,25 +12,20 @@ interface City {
   styleUrls: ['./app.component.css']
 })
 
-
 export class AppComponent {
-  cities1: SelectItem[];
-    
-  cities2: City[];
-
-  selectedCity1: City;
-  
-  selectedCity2: City;
+  series: SelectItem[];    
+  cities2: Serie[];
+  selectedSerie: Serie;  
 
   constructor() {
       //SelectItem API with label-value pairs
-      this.cities1 = [
-          {label:'Select City', value:null},
-          {label:'New York', value:{id:1, name: 'New York', code: 'NY'}},
-          {label:'Rome', value:{id:2, name: 'Rome', code: 'RM'}},
-          {label:'London', value:{id:3, name: 'London', code: 'LDN'}},
-          {label:'Istanbul', value:{id:4, name: 'Istanbul', code: 'IST'}},
-          {label:'Paris', value:{id:5, name: 'Paris', code: 'PRS'}}
+      this.series = [
+          {label:'Seleccione Serie', value:null},
+          {label:'Master Of None', value:{id:1, name: 'New York', code: 'NY'}},
+          {label:'Westworld', value:{id:2, name: 'Rome', code: 'RM'}},
+          {label:'This Is Us', value:{id:3, name: 'London', code: 'LDN'}},
+          {label:'Arrested Development', value:{id:4, name: 'Istanbul', code: 'IST'}},
+          {label:'The Terror', value:{id:5, name: 'Paris', code: 'PRS'}}
       ];
       
       //An array of cities

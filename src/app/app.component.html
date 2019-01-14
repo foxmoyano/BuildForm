@@ -1,1 +1,38 @@
-<p-dropdown [options]="cities1" formControlName="selectedCity"></p-dropdown>
+<div class="ui-fluid" style="background-color: #F2F8FA; padding-right: 20px;">
+    <div class="ui-g-12">
+        <div class="card no-margin">
+            <div class="ui-g form-group">
+
+                <div class="ui-g-12 ui-md-6">
+                    <div class="ui-inputgroup">
+                        <span class="ui-inputgroup-addon"><i class="fa fa-search"></i></span>
+                        <input style="text-align: left;" type="text" pInputText (input)="dt.filterGlobal($event.target.value, 'contains')">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="ui-g-12">
+        <div class="ui-g">
+            <div class="ui-g-16">
+                <div class="card no-margin">
+                    <h1>Series</h1>
+                    <div class="ui-g form-group">
+
+                        <div class="ui-g-12 ui-md-3">
+                            <label for="dropdown">Favorita:</label>
+                        </div>       
+
+                        <div class="ui-g-12 ui-md-3">
+                            <p-dropdown [options]="series" formControlName="selectedSerie"></p-dropdown>
+                        </div>
+        
+                    </div>
+                </div>      
+            </div>  
+        </div>
+    </div>
+
+  </div>
