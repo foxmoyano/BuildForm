@@ -1,5 +1,6 @@
 import { Component }  from '@angular/core';
 import { SelectItem } from 'primeng/api';
+import { PanelModule } from 'primeng/panel';
 
 interface Serie {
   name: string;

@@ -1,38 +1,16 @@
-<div class="ui-fluid" style="background-color: #F2F8FA; padding-right: 20px;">
-    <div class="ui-g-12">
-        <div class="card no-margin">
-            <div class="ui-g form-group">
-
-                <div class="ui-g-12 ui-md-6">
-                    <div class="ui-inputgroup">
-                        <span class="ui-inputgroup-addon"><i class="fa fa-search"></i></span>
-                        <input style="text-align: left;" type="text" pInputText (input)="dt.filterGlobal($event.target.value, 'contains')">
-                    </div>
+<div class="ui-g">
+    <div class="ui-lg-12 ui-md-12 ui-sm-12 center-login">
+        <p-panel header="Series">
+            <div class="ui-g">
+                <div class="ui-lg-12 ui-md-6">
+                    <h5 class="first in-label">Drama</h5>
+                    <p-dropdown [options]="series" [(ngModel)]="selectedSerie"></p-dropdown>
                 </div>
-
+                <div class="ui-lg-12 ui-md-6">
+                    <h5 class="first in-label">Comedia</h5>
+                    <p-dropdown [options]="series" [(ngModel)]="selectedSerie"></p-dropdown>
+                </div>
             </div>
-        </div>
+        </p-panel>
     </div>
-
-    <div class="ui-g-12">
-        <div class="ui-g">
-            <div class="ui-g-16">
-                <div class="card no-margin">
-                    <h1>Series</h1>
-                    <div class="ui-g form-group">
-
-                        <div class="ui-g-12 ui-md-3">
-                            <label for="dropdown">Favorita:</label>
-                        </div>       
-
-                        <div class="ui-g-12 ui-md-3">
-                            <p-dropdown [options]="series" formControlName="selectedSerie"></p-dropdown>
-                        </div>
-        
-                    </div>
-                </div>      
-            </div>  
-        </div>
-    </div>
-
-  </div>
+</div>
