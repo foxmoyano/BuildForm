@@ -15,8 +15,11 @@ interface Serie {
 
 export class AppComponent {
   series: SelectItem[];    
-  cities2: Serie[];
-  selectedSerie: Serie;  
+  dramas: Serie[];
+  comedias: Serie[];
+  
+  selectedDrama: Serie;  
+  selectedComedia: Serie; 
 
   constructor() {
       //SelectItem API with label-value pairs
@@ -29,13 +32,23 @@ export class AppComponent {
           {label:'The Terror', value:{id:5, name: 'Paris', code: 'PRS'}}
       ];
       
-      //An array of cities
-      this.cities2 = [
-          {name: 'New York', code: 'NY'},
-          {name: 'Rome', code: 'RM'},
-          {name: 'London', code: 'LDN'},
-          {name: 'Istanbul', code: 'IST'},
-          {name: 'Paris', code: 'PRS'}
+      //Series Drama
+      this.dramas = [
+          { name: 'The Leftovers', code: 'NY' },
+          { name: 'The Wire', code: 'RM' },
+          { name: 'Breaking Bad', code: 'LDN' },
+          { name: 'The Americans', code: 'IST' },
+          { name: 'Game Of Thrones', code: 'PRS' }
       ];
+
+      //Series Comedia
+      this.comedias = [
+        { name: 'The Big Bang Theory', code: 'NY' },
+        { name: 'How I Met Your Mother', code: 'RM' },
+        { name: 'Silicon Valley', code: 'LDN' },
+        { name: 'Married With Children', code: 'IST' },
+        { name: 'Friends', code: 'PRS' }
+    ];
+
   }
 }
